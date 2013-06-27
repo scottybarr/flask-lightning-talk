@@ -50,6 +50,16 @@
 </section>
 
 <section class="slide">
+    <h2>In the Box</h2>
+    <ul>
+        <li>Built in dev server with awesome debugger.</li>
+        <li>Integrated unit testing support.</li>
+        <li>Based on unicode</li>
+        <li>Beautiful URL Rules (What I'll talk about for the next 2-3 minutes!)</li>
+    </ul>
+</section>
+
+<section class="slide">
     <h2>Your First Flask Project</h2>
 
     <pre class="m-bg">
@@ -81,11 +91,12 @@
     <h2>Flask vs Django - URL Routing</h2>
     <h4>Flask</h4>
     <ul>
-            <li>Defines routes based on either variables or regex.</li>
+            <li>Defines routes based on either variables rules.</li>
+            <li>@app.route('/user/<int:userid>/')</li>
     </ul>
     <h4>Django</h4>
     <ul>
-            <li>Defines routes on regex.</li>
+            <li>Defines routes based on regex.</li>
     </ul>
 </section>
 

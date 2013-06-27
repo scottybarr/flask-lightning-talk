@@ -1,0 +1,27 @@
+.m-bg {
+    background-color: #272822 !important;
+    color: #f9f9f5 !important;
+}
+
+.m-blue {
+    color: #66d9ef;
+    font-style: italic !important;
+}
+
+.m-green {
+    color: #93dc3c;
+}
+
+.m-pink {
+    color: #fd4485;
+}
+
+.m-yellow {
+    color: #d8ce7d;
+}
+
+.split {
+    font-size: 0.8em !important;
+    float: left;
+    width: 49%;
+}

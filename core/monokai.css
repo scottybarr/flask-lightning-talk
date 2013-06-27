@@ -1,6 +1,11 @@
 .m-bg {
     background-color: #272822 !important;
     color: #f9f9f5 !important;
+    text-shadow: none !important;
+}
+
+.m-white {
+    color: #f9f9f5;
 }
 
 .m-blue {
@@ -18,6 +23,10 @@
 
 .m-yellow {
     color: #d8ce7d;
+}
+
+.m-orange {
+    color: orange;
 }
 
 .split {

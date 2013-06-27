@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=1024, user-scalable=no">
 
     <title>Sipping From the Flask</title>
-    
+
     <!-- Required stylesheet -->
     <link rel="stylesheet" href="core/deck.core.css">
-    
+
     <!-- Extension CSS files go here. Remove or add as needed. -->
     <link rel="stylesheet" href="extensions/goto/deck.goto.css">
     <link rel="stylesheet" href="extensions/menu/deck.menu.css">
@@ -20,12 +20,12 @@
 
     <!-- Style theme. More available in /themes/style/ or create your own. -->
     <link rel="stylesheet" href="themes/style/web-2.0.css">
-    
+
     <!-- Transition theme. More available in /themes/transition/ or create your own. -->
     <link rel="stylesheet" href="themes/transition/horizontal-slide.css">
 
     <link rel="stylesheet" href="core/monokai.css">
-    
+
     <!-- Required Modernizr file -->
     <script src="modernizr.custom.js"></script>
 </head>
@@ -66,25 +66,51 @@
 </section>
 
 <section class="slide">
-    <h2>Flask vs Django</h2>
-    <div class="split">
-        <ul>
+    <h2>Flask vs Django - Overview</h2>
+    <h4>Flask</h4>
+    <ul>
             <li>Flask doesn't include the batteries. Decouples and reduces constraints in your code.</li>
-            <li>Defines routes based on either variables or regex.</li>
-            <li>@app.route('/edit/', methods=['PUT', 'POST'])</li>
-            <li>return jsonify(my_dict)</li>
-            <li>Debugger is basic with option to inspect vars.</li>
-        </ul>
-    </div>
-    <div class="split">
-        <ul>
+    </ul>
+    <h4>Django</h4>
+    <ul>
             <li>Django includes the batteries (Templating, ORM, auth, debug toolbar...)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Flask vs Django - URL Routing</h2>
+    <h4>Flask</h4>
+    <ul>
+            <li>Defines routes based on either variables or regex.</li>
+    </ul>
+    <h4>Django</h4>
+    <ul>
             <li>Defines routes on regex.</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Flask vs Django - Accepted View Request Methods</h2>
+    <h4>Flask</h4>
+    <ul>
+            <li>@app.route('/edit/', methods=['PUT', 'POST'])</li>
+    </ul>
+    <h4>Django</h4>
+    <ul>
             <li>if request.method == 'POST':</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Flask vs Django - Returning JSON</h2>
+    <h4>Flask</h4>
+    <ul>
+            <li>return jsonify(my_dict)</li>
+    </ul>
+    <h4>Django</h4>
+    <ul>
             <li>return HttpResponse(json.dumps(my_dict), mimetype="application/json")</li>
-            <li>Debug Output is convoluted + CANNOT DEBUG!</li>
-        </ul>
-    </div>
+    </ul>
 </section>
 
 
@@ -97,8 +123,7 @@
     <h2>Interesting URL Routes</h2>
     <ul>
         <li><pre class="m-bg">@<span class="m-pink">app</span>.route(<span class="m-yellow">'/results/
-           <span class="m-white">&lt;</span><span class="m-blue">string</span>(<span class="m-green">length</span><span class="m-pink">=</span>2):<span class="m-orange">country</span><span class="m-white">&gt;</span>/
-           <span class="m-white">&lt;</span><span class="m-blue">string</span>(<span class="m-green">length</span><span class="m-pink">=</span>2):<span class="m-orange">language</span><span class="m-white">&gt;</span>/
+           <span class="m-white">&lt;</span><span class="m-blue">string</span>(<span class="m-green">length</span><span class="m-pink">=</span>2):<span class="m-orange">language</span><span class="m-white">&gt;</span>-<span class="m-white">&lt;</span><span class="m-blue">string</span>(<span class="m-green">length</span><span class="m-pink">=</span>2):<span class="m-orange">country</span><span class="m-white">&gt;</span>/
            <span class="m-white">&lt;</span><span class="m-blue">string</span>(<span class="m-green">length</span><span class="m-pink">=</span>3):<span class="m-orange">currency</span><span class="m-white">&gt;</span>/
            <span class="m-white">&lt;</span><span class="m-blue">string</span>(<span class="m-green">length</span><span class="m-pink">=</span>3):<span class="m-orange">pick_up_iata</span><span class="m-white">&gt;</span>/
            <span class="m-white">&lt;</span><span class="m-blue">string</span>(<span class="m-green">length</span><span class="m-pink">=</span>3):<span class="m-orange">drop_off_iata</span><span class="m-white">&gt;</span>/

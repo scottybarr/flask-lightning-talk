@@ -29,6 +29,11 @@
  - In Flask you have a jsonify method that takes a python dictionary or list, encodes it as JSON and sets the appropriate mimetype.
  - As you can see in Django, you have to do all of that yourself...
  
- 
-
- 
+# Interesting URL Route
+ - Similar to a simplified URL carhire route.
+ - Begins with a string indicating it's a results page.
+ - Defines a locale separated by a hyphen.
+ - a currency
+ - iata codes
+ - a driver age.
+ - We can provide types to the Flask route for each individual parameter to ensure URL validity. Flask will also convert these parts into the defined type when it passes these as parameters to the view method.
